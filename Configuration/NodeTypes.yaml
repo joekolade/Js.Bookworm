@@ -38,15 +38,15 @@
           group: 'background'
   childNodes:
     hero:
-      type: 'NEOS.Neos:ContentCollection'
+      type: 'TYPO3.Neos:ContentCollection'
       constraints: *columnConstraints
     footer:
-      type: 'NEOS.Neos:ContentCollection'
+      type: 'TYPO3.Neos:ContentCollection'
       constraints: *columnConstraints
 
 'Js.Bookworm:Newsblock':
   superTypes:
-    'NEOS.Neos:Content': TRUE
+    'TYPO3.Neos:Content': TRUE
   ui:
     label: 'News Element'
     group: 'general'
@@ -107,7 +107,7 @@
 
 'Js.Bookworm:Databox':
   superTypes:
-    'NEOS.Neos:Content': TRUE
+    'TYPO3.Neos:Content': TRUE
   ui:
     label: 'Data-Box'
     icon: 'icon-data'
@@ -131,13 +131,13 @@
 # 
 'Js.Bookworm:Slider':
   superTypes:
-    'NEOS.Neos:Content': TRUE
+    'TYPO3.Neos:Content': TRUE
   childNodes:
     sliderItems:
-      type: 'NEOS.Neos:ContentCollection'
+      type: 'TYPO3.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'NEOS.Neos.NodeTypes:Image': TRUE
+          'TYPO3.Neos.NodeTypes:Image': TRUE
           '*': FALSE
   ui:
     label: 'Slider'
