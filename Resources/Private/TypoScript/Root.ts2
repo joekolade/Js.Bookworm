@@ -8,17 +8,17 @@ include: NodeTypes/*.ts2
 page = Page {
 	head {
 
-		metadata = TYPO3.TypoScript:Template {
+		metadata = NEOS.TypoScript:Template {
 			templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
 			sectionName = 'metadata'
 		}
 
-		stylesheets.site = TYPO3.TypoScript:Template {
+		stylesheets.site = NEOS.TypoScript:Template {
 			templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
 			sectionName = 'stylesheets'
 		}
 
-		javascripts.site = TYPO3.TypoScript:Template {
+		javascripts.site = NEOS.TypoScript:Template {
 			templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
 			sectionName = 'headScripts'
 		}
@@ -38,11 +38,11 @@ page = Page {
 		
 		heroimage = ${q(node).property('heroimage')}
 
-		hero = TYPO3.Neos:ContentCollection {
+		hero = NEOS.Neos:ContentCollection {
       nodePath = ${q(site).find('hero').property('_path')}
       collection = ${q(site).children('hero').children()}
 		}
-		footer = TYPO3.Neos:ContentCollection {
+		footer = NEOS.Neos:ContentCollection {
       nodePath = ${q(site).find('footer').property('_path')}
       collection = ${q(site).children('footer').children()}
 		}
@@ -55,17 +55,17 @@ page = Page {
 			}
 		}
 
-		logoMini = TYPO3.TypoScript:Tag {
+		logoMini = NEOS.TypoScript:Tag {
 			tagName = 'img'
 			attributes {
 				class = "logo"
-				src = TYPO3.TypoScript:ResourceUri {
+				src = NEOS.TypoScript:ResourceUri {
 					path = 'resource://Js.Bookworm/Public/Images/logo-02.svg'
 				}
 			}
 		}
 
-		javascripts.site = TYPO3.TypoScript:Template {
+		javascripts.site = NEOS.TypoScript:Template {
 			templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
 			sectionName = 'bodyScripts'
 		}

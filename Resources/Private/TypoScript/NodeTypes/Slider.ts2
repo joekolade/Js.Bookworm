@@ -3,17 +3,17 @@
 # 
 prototype(Js.Bookworm:Slider) {
   attributes.class = 'slick-slider'
-  sliderItems = TYPO3.Neos:ContentCollection {
+  sliderItems = NEOS.Neos:ContentCollection {
     nodePath = 'sliderItems'
     content.iterationName = 'sliderItemsIteration'
     attributes.class = 'slick-slider'
   }
 
   // Collect the slider items - only collect images
-  sliderItemArray = ${q(node).children('sliderItems').children('[instanceof TYPO3.Neos.NodeTypes:Image]')}
+  sliderItemArray = ${q(node).children('sliderItems').children('[instanceof NEOS.Neos.NodeTypes:Image]')}
 
   // Enhance image prototype when inside the carousel
-  prototype(TYPO3.Neos.NodeTypes:Image) {
+  prototype(NEOS.Neos.NodeTypes:Image) {
     // Render images in the carousel with a special template.
     templatePath = 'resource://Js.Bookworm/Private/Templates/NodeTypes/SliderItems.html'
 

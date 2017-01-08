@@ -2,25 +2,25 @@
 # to your pages. You can add as many areas as you like, still only those that are rendered in your TypoScript and
 # Template are visible on your page.
 
-'TYPO3.Neos.NodeTypes:Page':
+'NEOS.Neos.NodeTypes:Page':
   childNodes:
     main:
       constraints: &columnConstraints
         nodeTypes:
-          'TYPO3.Neos.NodeTypes:Form': FALSE
-          'TYPO3.Neos.NodeTypes:Login': FALSE
-          'TYPO3.Neos.NodeTypes:ContentReferences': FALSE
-          'TYPO3.Neos.NodeTypes:AssetList': FALSE
-          'TYPO3.Neos.NodeTypes:Menu': FALSE
-          'TYPO3.Neos.NodeTypes:Column': FALSE
-          'TYPO3.Neos.NodeTypes:TwoColumn': FALSE
-          'TYPO3.Neos.NodeTypes:ThreeColumn': FALSE
-          'TYPO3.Neos.NodeTypes:FourColumn': FALSE
-          'TYPO3.Neos:PluginView': FALSE
+          'NEOS.Neos.NodeTypes:Form': FALSE
+          'NEOS.Neos.NodeTypes:Login': FALSE
+          'NEOS.Neos.NodeTypes:ContentReferences': FALSE
+          'NEOS.Neos.NodeTypes:AssetList': FALSE
+          'NEOS.Neos.NodeTypes:Menu': FALSE
+          'NEOS.Neos.NodeTypes:Column': FALSE
+          'NEOS.Neos.NodeTypes:TwoColumn': FALSE
+          'NEOS.Neos.NodeTypes:ThreeColumn': FALSE
+          'NEOS.Neos.NodeTypes:FourColumn': FALSE
+          'NEOS.Neos:PluginView': FALSE
           'Flowpack.Neos.FrontendLogin:LoginForm': FALSE
 'Js.Bookworm:Startpage':
   superTypes:
-    'TYPO3.Neos.NodeTypes:Page': TRUE
+    'NEOS.Neos.NodeTypes:Page': TRUE
   ui:
     label: 'Startseite'
     inspector:
@@ -30,7 +30,7 @@
           position: 900
   properties:
     heroimage:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: NEOS\Media\Domain\Model\ImageInterface
       ui:
         label: 'Hero-Image'
         reloadPageIfChanged: TRUE
@@ -38,15 +38,15 @@
           group: 'background'
   childNodes:
     hero:
-      type: 'TYPO3.Neos:ContentCollection'
+      type: 'NEOS.Neos:ContentCollection'
       constraints: *columnConstraints
     footer:
-      type: 'TYPO3.Neos:ContentCollection'
+      type: 'NEOS.Neos:ContentCollection'
       constraints: *columnConstraints
 
 'Js.Bookworm:Newsblock':
   superTypes:
-    'TYPO3.Neos:Content': TRUE
+    'NEOS.Neos:Content': TRUE
   ui:
     label: 'News Element'
     group: 'general'
@@ -98,7 +98,7 @@
     label: 'News Element mit Bild'
   properties:
     image:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: NEOS\Media\Domain\Model\ImageInterface
       ui:
         label: 'Bild'
         reloadIfChanged: TRUE
@@ -107,7 +107,7 @@
 
 'Js.Bookworm:Databox':
   superTypes:
-    'TYPO3.Neos:Content': TRUE
+    'NEOS.Neos:Content': TRUE
   ui:
     label: 'Data-Box'
     icon: 'icon-data'
@@ -131,13 +131,13 @@
 # 
 'Js.Bookworm:Slider':
   superTypes:
-    'TYPO3.Neos:Content': TRUE
+    'NEOS.Neos:Content': TRUE
   childNodes:
     sliderItems:
-      type: 'TYPO3.Neos:ContentCollection'
+      type: 'NEOS.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'TYPO3.Neos.NodeTypes:Image': TRUE
+          'NEOS.Neos.NodeTypes:Image': TRUE
           '*': FALSE
   ui:
     label: 'Slider'

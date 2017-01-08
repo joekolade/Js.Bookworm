@@ -1,12 +1,12 @@
 #
 # Resizimg für Bilder
 #  
-TYPO3:
+NEOS:
   Neos:
     userInterface:
       inspector:
         dataTypes:
-          'TYPO3\Media\Domain\Model\ImageInterface':
+          'NEOS\Media\Domain\Model\ImageInterface':
             editorOptions:
               features:
                 resize: TRUE

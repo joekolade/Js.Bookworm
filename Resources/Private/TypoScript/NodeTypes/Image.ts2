@@ -1,7 +1,7 @@
 # 
 # Extend Image for responsive
 #
-prototype(TYPO3.Neos.NodeTypes:Image) {
+prototype(NEOS.Neos.NodeTypes:Image) {
   templatePath = 'resource://Js.Bookworm/Private/Templates/NodeTypes/Image.html'
   
   # Original

@@ -1,7 +1,7 @@
 #
 # News Block
 #
-prototype(Js.Bookworm:Newsblock) < prototype(TYPO3.Neos:Content) {
+prototype(Js.Bookworm:Newsblock) < prototype(NEOS.Neos:Content) {
   headline = ${q(node).property('headline')}
   text = ${q(node).property('text')}
   month = ${q(node).property('month')}
