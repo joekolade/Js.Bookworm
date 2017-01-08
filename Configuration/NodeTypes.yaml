@@ -2,25 +2,25 @@
 # to your pages. You can add as many areas as you like, still only those that are rendered in your TypoScript and
 # Template are visible on your page.
 
-'NEOS.Neos.NodeTypes:Page':
+'TYPO3.Neos.NodeTypes:Page':
   childNodes:
     main:
       constraints: &columnConstraints
         nodeTypes:
-          'NEOS.Neos.NodeTypes:Form': FALSE
-          'NEOS.Neos.NodeTypes:Login': FALSE
-          'NEOS.Neos.NodeTypes:ContentReferences': FALSE
-          'NEOS.Neos.NodeTypes:AssetList': FALSE
-          'NEOS.Neos.NodeTypes:Menu': FALSE
-          'NEOS.Neos.NodeTypes:Column': FALSE
-          'NEOS.Neos.NodeTypes:TwoColumn': FALSE
-          'NEOS.Neos.NodeTypes:ThreeColumn': FALSE
-          'NEOS.Neos.NodeTypes:FourColumn': FALSE
-          'NEOS.Neos:PluginView': FALSE
+          'TYPO3.Neos.NodeTypes:Form': FALSE
+          'TYPO3.Neos.NodeTypes:Login': FALSE
+          'TYPO3.Neos.NodeTypes:ContentReferences': FALSE
+          'TYPO3.Neos.NodeTypes:AssetList': FALSE
+          'TYPO3.Neos.NodeTypes:Menu': FALSE
+          'TYPO3.Neos.NodeTypes:Column': FALSE
+          'TYPO3.Neos.NodeTypes:TwoColumn': FALSE
+          'TYPO3.Neos.NodeTypes:ThreeColumn': FALSE
+          'TYPO3.Neos.NodeTypes:FourColumn': FALSE
+          'TYPO3.Neos:PluginView': FALSE
           'Flowpack.Neos.FrontendLogin:LoginForm': FALSE
 'Js.Bookworm:Startpage':
   superTypes:
-    'NEOS.Neos.NodeTypes:Page': TRUE
+    'TYPO3.Neos.NodeTypes:Page': TRUE
   ui:
     label: 'Startseite'
     inspector:
