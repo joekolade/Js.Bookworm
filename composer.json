@@ -1,5 +1,6 @@
 {
-    "description": "Add description here",
+    "name": "Bücherwürmle",
+    "description": "Buecherwuermle Website Package",
     "type": "neos-flow-site",
     "require": {
         "neos/neos": "*",
