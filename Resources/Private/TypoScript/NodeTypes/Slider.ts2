@@ -3,7 +3,7 @@
 # 
 prototype(Js.Bookworm:Slider) {
   attributes.class = 'slick-slider'
-  sliderItems = TYPO3.Neos:ContentCollection {
+  sliderItems = Neos.Neos:ContentCollection {
     nodePath = 'sliderItems'
     content.iterationName = 'sliderItemsIteration'
     attributes.class = 'slick-slider'

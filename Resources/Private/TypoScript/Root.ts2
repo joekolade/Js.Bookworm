@@ -38,11 +38,11 @@ page = Page {
 		
 		heroimage = ${q(node).property('heroimage')}
 
-		hero = TYPO3.Neos:ContentCollection {
+		hero = Neos.Neos:ContentCollection {
       nodePath = ${q(site).find('hero').property('_path')}
       collection = ${q(site).children('hero').children()}
 		}
-		footer = TYPO3.Neos:ContentCollection {
+		footer = Neos.Neos:ContentCollection {
       nodePath = ${q(site).find('footer').property('_path')}
       collection = ${q(site).children('footer').children()}
 		}
