@@ -2,8 +2,8 @@
  * Root TypoScript template for the buecherwuermle.de site
  */
 
-// Includes all additional ts2 files inside the NodeTypes folder
-include: NodeTypes/*.ts2
+// Includes all additional fusion files inside the NodeTypes folder
+include: NodeTypes/*.fusion
 
 page = Page {
 	head {
@@ -35,7 +35,7 @@ page = Page {
 				}
 			}
 		}
-		
+
 		heroimage = ${q(node).property('heroimage')}
 
 		hero = Neos.Neos:ContentCollection {
