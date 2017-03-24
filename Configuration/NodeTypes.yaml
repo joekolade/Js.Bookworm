@@ -30,7 +30,7 @@
           position: 900
   properties:
     heroimage:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
         label: Hero-Image
         reloadPageIfChanged: true
@@ -120,7 +120,7 @@
     label: 'News Element mit Bild'
   properties:
     image:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
         label: Bild
         reloadIfChanged: true
