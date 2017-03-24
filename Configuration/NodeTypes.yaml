@@ -20,7 +20,7 @@
           'Flowpack.Neos.FrontendLogin:LoginForm': false
 'Js.Bookworm:Startpage':
   superTypes:
-    'TYPO3.Neos.NodeTypes:Page': '1'
+    'TYPO3.Neos.NodeTypes:Page': true
   ui:
     label: Startseite
     inspector:
@@ -69,7 +69,7 @@
           'Flowpack.Neos.FrontendLogin:LoginForm': false
 'Js.Bookworm:Newsblock':
   superTypes:
-    'TYPO3.Neos:Content': '1'
+    'TYPO3.Neos:Content': true
   ui:
     label: 'News Element'
     group: general
@@ -115,7 +115,7 @@
           group: newsblock
 'Js.Bookworm:NewsblockImage':
   superTypes:
-    'Js.Bookworm:Newsblock': '1'
+    'Js.Bookworm:Newsblock': true
   ui:
     label: 'News Element mit Bild'
   properties:
@@ -128,7 +128,7 @@
           group: newsblock
 'Js.Bookworm:Databox':
   superTypes:
-    'TYPO3.Neos:Content': '1'
+    'TYPO3.Neos:Content': true
   ui:
     label: Data-Box
     icon: icon-data
@@ -148,7 +148,7 @@
         inlineEditable: true
 'Js.Bookworm:Slider':
   superTypes:
-    'TYPO3.Neos:Content': '1'
+    'TYPO3.Neos:Content': true
   childNodes:
     sliderItems:
       type: 'TYPO3.Neos:ContentCollection'
