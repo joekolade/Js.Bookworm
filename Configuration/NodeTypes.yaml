@@ -16,7 +16,7 @@
           'Neos.NodeTypes:TwoColumn': false
           'Neos.NodeTypes:ThreeColumn': false
           'Neos.NodeTypes:FourColumn': false
-          'TYPO3.Neos:PluginView': false
+          'Neos.Neos:PluginView': false
           'Flowpack.Neos.FrontendLogin:LoginForm': false
 'Js.Bookworm:Startpage':
   superTypes:
@@ -38,7 +38,7 @@
           group: background
   childNodes:
     hero:
-      type: 'TYPO3.Neos:ContentCollection'
+      type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
           'Neos.NodeTypes:Form': false
@@ -50,10 +50,10 @@
           'Neos.NodeTypes:TwoColumn': false
           'Neos.NodeTypes:ThreeColumn': false
           'Neos.NodeTypes:FourColumn': false
-          'TYPO3.Neos:PluginView': false
+          'Neos.Neos:PluginView': false
           'Flowpack.Neos.FrontendLogin:LoginForm': false
     footer:
-      type: 'TYPO3.Neos:ContentCollection'
+      type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
           'Neos.NodeTypes:Form': false
@@ -65,11 +65,11 @@
           'Neos.NodeTypes:TwoColumn': false
           'Neos.NodeTypes:ThreeColumn': false
           'Neos.NodeTypes:FourColumn': false
-          'TYPO3.Neos:PluginView': false
+          'Neos.Neos:PluginView': false
           'Flowpack.Neos.FrontendLogin:LoginForm': false
 'Js.Bookworm:Newsblock':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: 'News Element'
     group: general
@@ -128,7 +128,7 @@
           group: newsblock
 'Js.Bookworm:Databox':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: Data-Box
     icon: icon-data
@@ -148,10 +148,10 @@
         inlineEditable: true
 'Js.Bookworm:Slider':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   childNodes:
     sliderItems:
-      type: 'TYPO3.Neos:ContentCollection'
+      type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
           'Neos.NodeTypes:Image': true
