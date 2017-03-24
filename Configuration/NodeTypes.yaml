@@ -2,25 +2,25 @@
 # to your pages. You can add as many areas as you like, still only those that are rendered in your TypoScript and
 # Template are visible on your page.
 
-'TYPO3.Neos.NodeTypes:Page':
+'Neos.NodeTypes:Page':
   childNodes:
     main:
       constraints:
         nodeTypes:
-          'TYPO3.Neos.NodeTypes:Form': false
-          'TYPO3.Neos.NodeTypes:Login': false
-          'TYPO3.Neos.NodeTypes:ContentReferences': false
-          'TYPO3.Neos.NodeTypes:AssetList': false
-          'TYPO3.Neos.NodeTypes:Menu': false
-          'TYPO3.Neos.NodeTypes:Column': false
-          'TYPO3.Neos.NodeTypes:TwoColumn': false
-          'TYPO3.Neos.NodeTypes:ThreeColumn': false
-          'TYPO3.Neos.NodeTypes:FourColumn': false
+          'Neos.NodeTypes:Form': false
+          'Neos.NodeTypes:Login': false
+          'Neos.NodeTypes:ContentReferences': false
+          'Neos.NodeTypes:AssetList': false
+          'Neos.NodeTypes:Menu': false
+          'Neos.NodeTypes:Column': false
+          'Neos.NodeTypes:TwoColumn': false
+          'Neos.NodeTypes:ThreeColumn': false
+          'Neos.NodeTypes:FourColumn': false
           'TYPO3.Neos:PluginView': false
           'Flowpack.Neos.FrontendLogin:LoginForm': false
 'Js.Bookworm:Startpage':
   superTypes:
-    'TYPO3.Neos.NodeTypes:Page': true
+    'Neos.NodeTypes:Page': true
   ui:
     label: Startseite
     inspector:
@@ -41,30 +41,30 @@
       type: 'TYPO3.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'TYPO3.Neos.NodeTypes:Form': false
-          'TYPO3.Neos.NodeTypes:Login': false
-          'TYPO3.Neos.NodeTypes:ContentReferences': false
-          'TYPO3.Neos.NodeTypes:AssetList': false
-          'TYPO3.Neos.NodeTypes:Menu': false
-          'TYPO3.Neos.NodeTypes:Column': false
-          'TYPO3.Neos.NodeTypes:TwoColumn': false
-          'TYPO3.Neos.NodeTypes:ThreeColumn': false
-          'TYPO3.Neos.NodeTypes:FourColumn': false
+          'Neos.NodeTypes:Form': false
+          'Neos.NodeTypes:Login': false
+          'Neos.NodeTypes:ContentReferences': false
+          'Neos.NodeTypes:AssetList': false
+          'Neos.NodeTypes:Menu': false
+          'Neos.NodeTypes:Column': false
+          'Neos.NodeTypes:TwoColumn': false
+          'Neos.NodeTypes:ThreeColumn': false
+          'Neos.NodeTypes:FourColumn': false
           'TYPO3.Neos:PluginView': false
           'Flowpack.Neos.FrontendLogin:LoginForm': false
     footer:
       type: 'TYPO3.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'TYPO3.Neos.NodeTypes:Form': false
-          'TYPO3.Neos.NodeTypes:Login': false
-          'TYPO3.Neos.NodeTypes:ContentReferences': false
-          'TYPO3.Neos.NodeTypes:AssetList': false
-          'TYPO3.Neos.NodeTypes:Menu': false
-          'TYPO3.Neos.NodeTypes:Column': false
-          'TYPO3.Neos.NodeTypes:TwoColumn': false
-          'TYPO3.Neos.NodeTypes:ThreeColumn': false
-          'TYPO3.Neos.NodeTypes:FourColumn': false
+          'Neos.NodeTypes:Form': false
+          'Neos.NodeTypes:Login': false
+          'Neos.NodeTypes:ContentReferences': false
+          'Neos.NodeTypes:AssetList': false
+          'Neos.NodeTypes:Menu': false
+          'Neos.NodeTypes:Column': false
+          'Neos.NodeTypes:TwoColumn': false
+          'Neos.NodeTypes:ThreeColumn': false
+          'Neos.NodeTypes:FourColumn': false
           'TYPO3.Neos:PluginView': false
           'Flowpack.Neos.FrontendLogin:LoginForm': false
 'Js.Bookworm:Newsblock':
@@ -154,7 +154,7 @@
       type: 'TYPO3.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'TYPO3.Neos.NodeTypes:Image': true
+          'Neos.NodeTypes:Image': true
           '*': false
   ui:
     label: Slider
