@@ -10,10 +10,10 @@ prototype(Js.Bookworm:Slider) {
   }
 
   // Collect the slider items - only collect images
-  sliderItemArray = ${q(node).children('sliderItems').children('[instanceof TYPO3.Neos.NodeTypes:Image]')}
+  sliderItemArray = ${q(node).children('sliderItems').children('[instanceof Neos.NodeTypes:Image]')}
 
   // Enhance image prototype when inside the carousel
-  prototype(TYPO3.Neos.NodeTypes:Image) {
+  prototype(Neos.NodeTypes:Image) {
     // Render images in the carousel with a special template.
     templatePath = 'resource://Js.Bookworm/Private/Templates/NodeTypes/SliderItems.html'
 
