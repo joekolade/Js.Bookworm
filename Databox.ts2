@@ -1,7 +1,7 @@
 # 
 # Databox
 # 
-prototype(Js.Bookworm:Databox) < prototype(TYPO3.Neos:Content) {
+prototype(Js.Bookworm:Databox) < prototype(Neos.Neos:Content) {
   templatePath = 'resource://Js.Bookworm/Private/Templates/TypoScriptObjects/Databox.html'
   
   title = ${q(node).property('title')}

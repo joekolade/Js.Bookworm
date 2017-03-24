@@ -2,145 +2,162 @@
 # to your pages. You can add as many areas as you like, still only those that are rendered in your TypoScript and
 # Template are visible on your page.
 
-'TYPO3.Neos.NodeTypes:Page':
+'Neos.NodeTypes:Page':
   childNodes:
     main:
-      constraints: &columnConstraints
+      constraints:
         nodeTypes:
-          'TYPO3.Neos.NodeTypes:Form': FALSE
-          'TYPO3.Neos.NodeTypes:Login': FALSE
-          'TYPO3.Neos.NodeTypes:ContentReferences': FALSE
-          'TYPO3.Neos.NodeTypes:AssetList': FALSE
-          'TYPO3.Neos.NodeTypes:Menu': FALSE
-          'TYPO3.Neos.NodeTypes:Column': FALSE
-          'TYPO3.Neos.NodeTypes:TwoColumn': FALSE
-          'TYPO3.Neos.NodeTypes:ThreeColumn': FALSE
-          'TYPO3.Neos.NodeTypes:FourColumn': FALSE
-          'TYPO3.Neos:PluginView': FALSE
-          'Flowpack.Neos.FrontendLogin:LoginForm': FALSE
+          'Neos.NodeTypes:Form': false
+          'Neos.NodeTypes:Login': false
+          'Neos.NodeTypes:ContentReferences': false
+          'Neos.NodeTypes:AssetList': false
+          'Neos.NodeTypes:Menu': false
+          'Neos.NodeTypes:Column': false
+          'Neos.NodeTypes:TwoColumn': false
+          'Neos.NodeTypes:ThreeColumn': false
+          'Neos.NodeTypes:FourColumn': false
+          'Neos.Neos:PluginView': false
+          'Flowpack.Neos.FrontendLogin:LoginForm': false
 'Js.Bookworm:Startpage':
   superTypes:
-    'TYPO3.Neos.NodeTypes:Page': TRUE
+    'Neos.NodeTypes:Page': true
   ui:
-    label: 'Startseite'
+    label: Startseite
     inspector:
       groups:
         background:
-          label: 'Background'
+          label: Background
           position: 900
   properties:
     heroimage:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
-        label: 'Hero-Image'
-        reloadPageIfChanged: TRUE
+        label: Hero-Image
+        reloadPageIfChanged: true
         inspector:
-          group: 'background'
+          group: background
   childNodes:
     hero:
-      type: 'TYPO3.Neos:ContentCollection'
-      constraints: *columnConstraints
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Neos.NodeTypes:Form': false
+          'Neos.NodeTypes:Login': false
+          'Neos.NodeTypes:ContentReferences': false
+          'Neos.NodeTypes:AssetList': false
+          'Neos.NodeTypes:Menu': false
+          'Neos.NodeTypes:Column': false
+          'Neos.NodeTypes:TwoColumn': false
+          'Neos.NodeTypes:ThreeColumn': false
+          'Neos.NodeTypes:FourColumn': false
+          'Neos.Neos:PluginView': false
+          'Flowpack.Neos.FrontendLogin:LoginForm': false
     footer:
-      type: 'TYPO3.Neos:ContentCollection'
-      constraints: *columnConstraints
-
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Neos.NodeTypes:Form': false
+          'Neos.NodeTypes:Login': false
+          'Neos.NodeTypes:ContentReferences': false
+          'Neos.NodeTypes:AssetList': false
+          'Neos.NodeTypes:Menu': false
+          'Neos.NodeTypes:Column': false
+          'Neos.NodeTypes:TwoColumn': false
+          'Neos.NodeTypes:ThreeColumn': false
+          'Neos.NodeTypes:FourColumn': false
+          'Neos.Neos:PluginView': false
+          'Flowpack.Neos.FrontendLogin:LoginForm': false
 'Js.Bookworm:Newsblock':
   superTypes:
-    'TYPO3.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   ui:
     label: 'News Element'
-    group: 'general'
-    icon: 'icon-calendar-o'
+    group: general
+    icon: icon-calendar-o
     inspector:
       groups:
         newsblock:
-          label: 'News'
-          icon: 'icon-calendar-o'
+          label: News
+          icon: icon-calendar-o
           position: 1
   properties:
     headline:
       type: string
       defaultValue: 'Überschrift ersetzten ...'
       ui:
-        label: 'Headline'
-        inlineEditable: TRUE
+        label: Headline
+        inlineEditable: true
     text:
       type: string
       defaultValue: 'Hier kann Text hin ...'
       ui:
-        label: 'Text'
-        reloadIfChanged: TRUEtext:
+        label: Text
+        reloadIfChanged: 'TRUEtext:'
     month:
       type: string
       defaultValue: '1. Januar'
       ui:
         label: 'Tag und Monat'
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
     year:
       type: string
       defaultValue: '2016'
       ui:
-        label: 'Jahr'
-        reloadIfChanged: TRUE
+        label: Jahr
+        reloadIfChanged: true
     topnews:
       type: boolean
-      defaultValue: FALSE
+      defaultValue: false
       ui:
         label: 'Top News (gelb auf blau)?'
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'newsblock'
-
+          group: newsblock
 'Js.Bookworm:NewsblockImage':
   superTypes:
-    'Js.Bookworm:Newsblock': TRUE
+    'Js.Bookworm:Newsblock': true
   ui:
     label: 'News Element mit Bild'
   properties:
     image:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
-        label: 'Bild'
-        reloadIfChanged: TRUE
+        label: Bild
+        reloadIfChanged: true
         inspector:
-          group: 'newsblock'
-
+          group: newsblock
 'Js.Bookworm:Databox':
   superTypes:
-    'TYPO3.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   ui:
-    label: 'Data-Box'
-    icon: 'icon-data'
-    group: 'general'
+    label: Data-Box
+    icon: icon-data
+    group: general
   properties:
     title:
-      type: 'string'
-      defaultValue: 'Was'
+      type: string
+      defaultValue: Was
       ui:
-        label: 'Title'
-        inlineEditable: TRUE
+        label: Title
+        inlineEditable: true
     data:
-      type: 'string'
-      defaultValue: 'Beschreibung'
+      type: string
+      defaultValue: Beschreibung
       ui:
-        label: 'Title'
-        inlineEditable: TRUE
-
-#
-# Slick Slider
-# 
+        label: Title
+        inlineEditable: true
 'Js.Bookworm:Slider':
   superTypes:
-    'TYPO3.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   childNodes:
     sliderItems:
-      type: 'TYPO3.Neos:ContentCollection'
+      type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'TYPO3.Neos.NodeTypes:Image': TRUE
-          '*': FALSE
+          'Neos.NodeTypes:Image': true
+          '*': false
   ui:
-    label: 'Slider'
-    group: 'plugins'
-    icon: 'icon-picture'
-    inlineEditable: TRUE
+    label: Slider
+    group: plugins
+    icon: icon-picture
+    inlineEditable: true

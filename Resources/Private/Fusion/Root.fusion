@@ -1,0 +1,73 @@
+/**
+ * Root TypoScript template for the buecherwuermle.de site
+ */
+
+// Includes all additional ts2 files inside the NodeTypes folder
+include: NodeTypes/*.ts2
+
+page = Page {
+	head {
+
+		metadata = Neos.Fusion:Template {
+			templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
+			sectionName = 'metadata'
+		}
+
+		stylesheets.site = Neos.Fusion:Template {
+			templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
+			sectionName = 'stylesheets'
+		}
+
+		javascripts.site = Neos.Fusion:Template {
+			templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
+			sectionName = 'headScripts'
+		}
+	}
+
+	body {
+		templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
+		sectionName = 'body'
+		parts {
+			menu = Menu {
+				templatePath = 'resource://Js.Bookworm/Private/Templates/TypoScriptObjects/MainMenu.html'
+				current.attributes {
+					class = 'active'
+				}
+			}
+		}
+		
+		heroimage = ${q(node).property('heroimage')}
+
+		hero = Neos.Neos:ContentCollection {
+      nodePath = ${q(site).find('hero').property('_path')}
+      collection = ${q(site).children('hero').children()}
+		}
+		footer = Neos.Neos:ContentCollection {
+      nodePath = ${q(site).find('footer').property('_path')}
+      collection = ${q(site).children('footer').children()}
+		}
+
+
+		content {
+			// The default content section
+			main = PrimaryContent {
+				nodePath = 'main'
+			}
+		}
+
+		logoMini = Neos.Fusion:Tag {
+			tagName = 'img'
+			attributes {
+				class = "logo"
+				src = Neos.Fusion:ResourceUri {
+					path = 'resource://Js.Bookworm/Public/Images/logo-02.svg'
+				}
+			}
+		}
+
+		javascripts.site = Neos.Fusion:Template {
+			templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
+			sectionName = 'bodyScripts'
+		}
+	}
+}

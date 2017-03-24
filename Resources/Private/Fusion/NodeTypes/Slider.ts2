@@ -1,0 +1,27 @@
+# 
+# Slider
+# 
+prototype(Js.Bookworm:Slider) {
+  attributes.class = 'slick-slider'
+  sliderItems = Neos.Neos:ContentCollection {
+    nodePath = 'sliderItems'
+    content.iterationName = 'sliderItemsIteration'
+    attributes.class = 'slick-slider'
+  }
+
+  // Collect the slider items - only collect images
+  sliderItemArray = ${q(node).children('sliderItems').children('[instanceof Neos.NodeTypes:Image]')}
+
+  // Enhance image prototype when inside the carousel
+  prototype(Neos.NodeTypes:Image) {
+    // Render images in the carousel with a special template.
+    templatePath = 'resource://Js.Bookworm/Private/Templates/NodeTypes/SliderItems.html'
+
+    // The first item should later be marked as active
+    #attributes.class = ${'item' + (sliderItemsIteration.isFirst ? ' active' : '')}
+    attributes.class = 'item'
+
+    // We want to use the item iterator in fluid so we have to store it as variable.
+    iteration = ${sliderItemsIteration}
+  }
+}
