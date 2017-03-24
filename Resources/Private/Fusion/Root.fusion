@@ -29,7 +29,7 @@ page = Page {
 		sectionName = 'body'
 		parts {
 			menu = Menu {
-				templatePath = 'resource://Js.Bookworm/Private/Templates/TypoScriptObjects/MainMenu.html'
+				templatePath = 'resource://Js.Bookworm/Private/Templates/FusionObjects/MainMenu.html'
 				current.attributes {
 					class = 'active'
 				}
