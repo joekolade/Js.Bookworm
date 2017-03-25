@@ -5,7 +5,16 @@
 // Includes all additional fusion files inside the NodeTypes folder
 include: NodeTypes/*.fusion
 
-page = Page {
+
+root {
+	default {
+		type = ${q(node).property('_nodeType') + '.Document'}
+		renderPath >
+	}
+}
+
+prototype(Neos.NodeTypes:Page.Document) >
+prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
 	head {
 
 		metadata = Neos.Fusion:Template {
