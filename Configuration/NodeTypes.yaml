@@ -12,6 +12,7 @@
           'Neos.NodeTypes:FourColumn': false
           'Neos.Neos:PluginView': false
           'Flowpack.Neos.FrontendLogin:LoginForm': false
+
 'Js.Bookworm:Startpage':
   superTypes:
     'Neos.NodeTypes:Page': true
@@ -107,6 +108,7 @@
         reloadIfChanged: true
         inspector:
           group: newsblock
+
 'Js.Bookworm:NewsblockImage':
   superTypes:
     'Js.Bookworm:Newsblock': true
@@ -120,6 +122,7 @@
         reloadIfChanged: true
         inspector:
           group: newsblock
+
 'Js.Bookworm:Databox':
   superTypes:
     'Neos.Neos:Content': true
@@ -140,6 +143,7 @@
       ui:
         label: Title
         inlineEditable: true
+
 'Js.Bookworm:Slider':
   superTypes:
     'Neos.Neos:Content': true
