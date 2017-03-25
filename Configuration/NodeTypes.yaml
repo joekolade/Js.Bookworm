@@ -1,3 +1,4 @@
+
 'Neos.NodeTypes:Page':
   childNodes:
     main:
@@ -8,7 +9,6 @@
           'Neos.NodeTypes:ContentReferences': false
           'Neos.NodeTypes:AssetList': false
           'Neos.NodeTypes:Menu': false
-          'Neos.NodeTypes:Column': false
           'Neos.NodeTypes:FourColumn': false
           'Neos.Neos:PluginView': false
           'Flowpack.Neos.FrontendLogin:LoginForm': false
