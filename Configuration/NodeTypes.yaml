@@ -1,0 +1,171 @@
+# If you need more than just the "main" content area you can uncomment the snippet below. It will add a "sidebar" area
+# to your pages. You can add as many areas as you like, still only those that are rendered in your Fusion-code and
+# Template are visible on your page.
+---
+#'Neos.NodeTypes:Page':
+#  childNodes:
+#    'sidebar':
+#      type: 'Neos.Neos:ContentCollection'
+
+
+
+'Neos.NodeTypes:Page':
+  childNodes:
+    main:
+      constraints:
+        nodeTypes:
+          'Neos.NodeTypes:Form': false
+          'Neos.NodeTypes:Login': false
+          'Neos.NodeTypes:ContentReferences': false
+          'Neos.NodeTypes:AssetList': false
+          'Neos.NodeTypes:Menu': false
+          'Neos.NodeTypes:FourColumn': false
+          'Neos.Neos:PluginView': false
+          'Flowpack.Neos.FrontendLogin:LoginForm': false
+
+'Js.Bookworm:Startpage':
+  superTypes:
+    'Neos.NodeTypes:Page': true
+  ui:
+    label: Startseite
+    inspector:
+      groups:
+        background:
+          label: Background
+          position: 900
+  properties:
+    heroimage:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: Hero-Image
+        reloadPageIfChanged: true
+        inspector:
+          group: background
+  childNodes:
+    hero:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Neos.NodeTypes:Form': false
+          'Neos.NodeTypes:Login': false
+          'Neos.NodeTypes:ContentReferences': false
+          'Neos.NodeTypes:AssetList': false
+          'Neos.NodeTypes:Menu': false
+          'Neos.NodeTypes:Column': false
+          'Neos.NodeTypes:TwoColumn': false
+          'Neos.NodeTypes:ThreeColumn': false
+          'Neos.NodeTypes:FourColumn': false
+          'Neos.Neos:PluginView': false
+          'Flowpack.Neos.FrontendLogin:LoginForm': false
+    footer:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Neos.NodeTypes:Form': false
+          'Neos.NodeTypes:Login': false
+          'Neos.NodeTypes:ContentReferences': false
+          'Neos.NodeTypes:AssetList': false
+          'Neos.NodeTypes:Menu': false
+          'Neos.NodeTypes:Column': false
+          'Neos.NodeTypes:TwoColumn': false
+          'Neos.NodeTypes:ThreeColumn': false
+          'Neos.NodeTypes:FourColumn': false
+          'Neos.Neos:PluginView': false
+          'Flowpack.Neos.FrontendLogin:LoginForm': false
+'Js.Bookworm:Newsblock':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'News Element'
+    group: general
+    icon: icon-calendar-o
+    inspector:
+      groups:
+        newsblock:
+          label: News
+          icon: icon-calendar-o
+          position: 1
+  properties:
+    headline:
+      type: string
+      defaultValue: 'Überschrift ersetzten ...'
+      ui:
+        label: Headline
+        inlineEditable: true
+    text:
+      type: string
+      defaultValue: 'Hier kann Text hin ...'
+      ui:
+        label: Text
+        reloadIfChanged: 'TRUEtext:'
+    month:
+      type: string
+      defaultValue: '1. Januar'
+      ui:
+        label: 'Tag und Monat'
+        reloadIfChanged: true
+    year:
+      type: string
+      defaultValue: '2016'
+      ui:
+        label: Jahr
+        reloadIfChanged: true
+    topnews:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 'Top News (gelb auf blau)?'
+        reloadIfChanged: true
+        inspector:
+          group: newsblock
+
+'Js.Bookworm:NewsblockImage':
+  superTypes:
+    'Js.Bookworm:Newsblock': true
+  ui:
+    label: 'News Element mit Bild'
+  properties:
+    image:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: Bild
+        reloadIfChanged: true
+        inspector:
+          group: newsblock
+
+'Js.Bookworm:Databox':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Data-Box
+    icon: icon-data
+    group: general
+  properties:
+    title:
+      type: string
+      defaultValue: Was
+      ui:
+        label: Title
+        inlineEditable: true
+    data:
+      type: string
+      defaultValue: Beschreibung
+      ui:
+        label: Title
+        inlineEditable: true
+
+'Js.Bookworm:Slider':
+  superTypes:
+    'Neos.Neos:Content': true
+  childNodes:
+    sliderItems:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Neos.NodeTypes:Image': true
+          '*': false
+  ui:
+    label: Slider
+    group: plugins
+    icon: icon-picture
+    inlineEditable: true

@@ -1,0 +1,80 @@
+/**
+ * Root Fusion template for the Bookworm site
+ */
+
+root {
+	default {
+		type = ${q(node).property('_nodeType') + '.Document'}
+		renderPath >
+	}
+}
+
+prototype(Js.NodeTypes:Page.Document) >
+prototype(Js.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
+
+	head {
+		metadata = Neos.Fusion:Template {
+			templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
+			sectionName = 'metadata'
+		}
+
+		stylesheets.site = Neos.Fusion:Template {
+			templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
+			sectionName = 'stylesheets'
+		}
+
+		javascripts.site = Neos.Fusion:Template {
+			templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
+			sectionName = 'headScripts'
+		}
+	}
+
+	body {
+		templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
+		sectionName = 'body'
+		parts {
+			menu = Neos.Neos:Menu {
+				templatePath = 'resource://Js.Bookworm/Private/Templates/FusionObjects/MainMenu.html'
+				current.attributes {
+					class = 'active'
+				}
+			}
+		}
+
+		heroimage = ${q(node).property('heroimage')}
+
+		hero = Neos.Neos:ContentCollection {
+			nodePath = ${q(site).find('hero').property('_path')}
+			collection = ${q(site).children('hero').children()}
+		}
+		footer = Neos.Neos:ContentCollection {
+			nodePath = ${q(site).find('footer').property('_path')}
+			collection = ${q(site).children('footer').children()}
+		}
+
+
+		content {
+			// The default content section
+			main = PrimaryContent {
+				nodePath = 'main'
+			}
+		}
+
+		logoMini = Neos.Fusion:Tag {
+			tagName = 'img'
+			attributes {
+				class = "logo"
+				src = Neos.Fusion:ResourceUri {
+					path = 'resource://Js.Bookworm/Public/Images/logo-02.svg'
+				}
+			}
+		}
+
+		javascripts.site = Neos.Fusion:Template {
+			templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
+			sectionName = 'bodyScripts'
+		}
+	}
+}
+
+prototype(Js.Bookworm:Startpage.Document) < prototype(Js.NodeTypes:Page.Document)

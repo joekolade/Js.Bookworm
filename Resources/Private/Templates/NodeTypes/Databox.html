@@ -1,0 +1,10 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace media=Neos\Media\ViewHelpers}
+<div class="row" style="margin-bottom: 10px;">
+  <div class="col-xs-5">
+    {neos:contentElement.editable(property: 'title', tag: 'b')}
+  </div>
+  <div class="col-xs-7">
+    {neos:contentElement.editable(property: 'data')}
+  </div>
+</div>
