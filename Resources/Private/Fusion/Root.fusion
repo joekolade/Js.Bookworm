@@ -9,8 +9,8 @@ root {
 	}
 }
 
-prototype(Js.NodeTypes:Page.Document) >
-prototype(Js.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
+prototype(Neos.NodeTypes:Page.Document) >
+prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
 
 	head {
 		metadata = Neos.Fusion:Template {
@@ -77,4 +77,4 @@ prototype(Js.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
 	}
 }
 
-prototype(Js.Bookworm:Startpage.Document) < prototype(Js.NodeTypes:Page.Document)
+prototype(Js.Bookworm:Startpage.Document) < prototype(Neos.NodeTypes:Page.Document)
