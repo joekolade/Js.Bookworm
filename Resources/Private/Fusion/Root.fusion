@@ -80,3 +80,9 @@ prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
 }
 
 prototype(Js.Bookworm:Startpage.Document) < prototype(Neos.NodeTypes:Page.Document)
+
+
+
+prototype(Neos.NodeTypes:Image) {
+	maximumWidth = 740
+}

@@ -1,13 +1,12 @@
-#
-# Resizimg für Bilder
-#
-
 Neos:
   Neos:
     userInterface:
-      inspector:
-        dataTypes:
-          Neos\Media\Domain\Model\ImageInterface:
-            editorOptions:
-              features:
-                resize: true
+      defaultLanguage: 'de'
+      #backendLoginForm:
+        #backgroundImage: 'resource://Js.TherapieOx/Public/Images/sporn_bc.jpg'
+
+
+MOC:
+  ImageOptimizer:
+    useGlobalBinary: true
+    #globalBinaryPath: ''
