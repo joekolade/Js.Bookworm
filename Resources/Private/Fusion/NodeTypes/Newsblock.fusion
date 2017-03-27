@@ -1,0 +1,14 @@
+#
+# News Block
+#
+prototype(Js.Bookworm:Newsblock) < prototype(Neos.Neos:Content) {
+  headline = ${q(node).property('headline')}
+  text = ${q(node).property('text')}
+  month = ${q(node).property('month')}
+  year = ${q(node).property('year')}
+  topnews = ${q(node).property('topnews')}
+}
+# News Block w/ image
+prototype(Js.Bookworm:NewsblockImage) < prototype(Js.Bookworm:Newsblock) {
+  image = ${q(node).property('image')}
+}

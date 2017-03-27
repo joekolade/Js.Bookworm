@@ -2,6 +2,8 @@
  * Root Fusion template for the Bookworm site
  */
 
+include: NodeTypes/*.fusion
+
 root {
 	default {
 		type = ${q(node).property('_nodeType') + '.Document'}
