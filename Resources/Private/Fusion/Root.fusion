@@ -11,6 +11,8 @@ root {
 	}
 }
 
+
+
 prototype(Neos.NodeTypes:Page.Document) >
 prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
 

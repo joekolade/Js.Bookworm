@@ -8,7 +8,6 @@
 #      type: 'Neos.Neos:ContentCollection'
 
 
-
 'Neos.NodeTypes:Page':
   childNodes:
     main:
