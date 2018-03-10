@@ -120,10 +120,8 @@
           group: newsblock
     newslink:
       type: string
-      defaultValue: false
       ui:
         label: 'Link'
-        reloadIfChanged: true
         inspector:
           group: newsblock
           editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
