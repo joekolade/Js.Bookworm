@@ -1,10 +1,8 @@
 /**
- * Root TypoScript template for the buecherwuermle.de site
+ * Root Fusion template for the Bookworm site
  */
 
-// Includes all additional fusion files inside the NodeTypes folder
 include: NodeTypes/*.fusion
-
 
 root {
 	default {
@@ -15,8 +13,8 @@ root {
 
 prototype(Neos.NodeTypes:Page.Document) >
 prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
-	head {
 
+	head {
 		metadata = Neos.Fusion:Template {
 			templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
 			sectionName = 'metadata'
@@ -37,7 +35,7 @@ prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
 		templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
 		sectionName = 'body'
 		parts {
-			menu = Menu {
+			menu = Neos.Neos:Menu {
 				templatePath = 'resource://Js.Bookworm/Private/Templates/FusionObjects/MainMenu.html'
 				current.attributes {
 					class = 'active'
@@ -48,12 +46,12 @@ prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
 		heroimage = ${q(node).property('heroimage')}
 
 		hero = Neos.Neos:ContentCollection {
-      nodePath = ${q(site).find('hero').property('_path')}
-      collection = ${q(site).children('hero').children()}
+			nodePath = ${q(site).find('hero').property('_path')}
+			collection = ${q(site).children('hero').children()}
 		}
 		footer = Neos.Neos:ContentCollection {
-      nodePath = ${q(site).find('footer').property('_path')}
-      collection = ${q(site).children('footer').children()}
+			nodePath = ${q(site).find('footer').property('_path')}
+			collection = ${q(site).children('footer').children()}
 		}
 
 
@@ -79,4 +77,12 @@ prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
 			sectionName = 'bodyScripts'
 		}
 	}
+}
+
+prototype(Js.Bookworm:Startpage.Document) < prototype(Neos.NodeTypes:Page.Document)
+
+
+
+prototype(Neos.NodeTypes:Image) {
+	maximumWidth = 740
 }

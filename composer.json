@@ -1,17 +1,17 @@
 {
-    "name": "Buecherwuermle Website Package",
-    "description": "Buecherwuermle Website Package",
+    "description": "Bücherwürmle Refactured",
     "type": "neos-site",
     "require": {
         "neos/neos": "*",
-        "neos/neos-nodetypes": "*"
+        "neos/nodetypes": "*"
     },
     "suggest": {
-        "neos/neos-seo": "*"
+        "neos/seo": "*"
     },
+    "name": "js/bookworm",
     "autoload": {
-        "psr-0": {
-            "Js\\Bookworm": "Classes/"
+        "psr-4": {
+            "Js\\Bookworm\\": "Classes/"
         }
     },
     "extra": {

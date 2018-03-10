@@ -1,6 +1,6 @@
-# 
+#
 # Slider
-# 
+#
 prototype(Js.Bookworm:Slider) {
   attributes.class = 'slick-slider'
   sliderItems = Neos.Neos:ContentCollection {

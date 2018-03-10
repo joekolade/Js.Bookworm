@@ -1,5 +1,5 @@
 {namespace neos=Neos\Neos\ViewHelpers}
-{namespace ts=Neos\Fusion\ViewHelpers}
+{namespace fusion=Neos\Fusion\ViewHelpers}
 
 <div class="collapse navbar-collapse navbar-ex1-collapse">
     <f:render section="itemsList" arguments="{items: items}" />
@@ -8,7 +8,7 @@
 <f:section name="itemsList">
     <ul class="nav navbar-nav">
         <f:for each="{items}" as="item" iteration="menuIteration">
-            <li{ts:render(path:'{item.state}.attributes') -> f:format.raw()}>
+            <li{fusion:render(path:'{item.state}.attributes') -> f:format.raw()}>
                 <neos:link.node node="{item.node}">{item.label}</neos:link.node>
             </li>
         </f:for>

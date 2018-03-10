@@ -1,9 +1,9 @@
-# 
+#
 # Extend Image for responsive
 #
 prototype(Neos.NodeTypes:Image) {
-  templatePath = 'resource://Js.Bookworm/Private/Templates/NodeTypes/Image.html'
-  
+  #templatePath = 'resource://Js.Bookworm/Private/Templates/NodeTypes/Image.html'
+
   # Original
   # imageClassName = ${q(node).property('alignment') ? ('typo3-neos-alignment-' + q(node).property('alignment')) : ''}
   imageClassName = ${q(node).property('alignment') ? ('typo3-neos-alignment-' + q(node).property('alignment') + ' img-responsive') : 'img-responsive'}
