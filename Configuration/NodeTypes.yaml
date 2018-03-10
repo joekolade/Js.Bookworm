@@ -118,7 +118,7 @@
         reloadIfChanged: true
         inspector:
           group: newsblock
-    link:
+    newslink:
       type: string
       defaultValue: false
       ui:
