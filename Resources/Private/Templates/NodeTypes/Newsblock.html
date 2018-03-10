@@ -14,6 +14,9 @@
       <div class="row text">
         <div class="col-xs-11">
           {neos:contentElement.editable(property: 'text')}
+            <f:if condition="{link}">
+                {link}
+            </f:if>
         </div>
       </div>
     </div>

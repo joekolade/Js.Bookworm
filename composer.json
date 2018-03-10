@@ -1,4 +1,5 @@
 {
+    "name": "Buecherwuermle Website Package",
     "description": "Buecherwuermle Website Package",
     "type": "neos-site",
     "require": {

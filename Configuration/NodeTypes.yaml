@@ -87,7 +87,7 @@
       defaultValue: 'Hier kann Text hin ...'
       ui:
         label: Text
-        reloadIfChanged: 'TRUEtext:'
+        reloadIfChanged: 'TRUE'
     month:
       type: string
       defaultValue: '1. Januar'
@@ -108,6 +108,15 @@
         reloadIfChanged: true
         inspector:
           group: newsblock
+    link:
+      type: string
+      defaultValue: false
+      ui:
+        label: 'Link'
+        reloadIfChanged: true
+        inspector:
+          group: newsblock
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
 
 'Js.Bookworm:NewsblockImage':
   superTypes:
