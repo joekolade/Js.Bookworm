@@ -117,13 +117,13 @@
         label: 'Top News (gelb auf blau)?'
         reloadIfChanged: true
         inspector:
-          group: newsblock
+          group: 'newsblock'
     newslink:
       type: string
       ui:
         label: 'Link'
         inspector:
-          group: newsblock
+          group: 'newsblock'
           editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
 
 'Js.Bookworm:NewsblockImage':
