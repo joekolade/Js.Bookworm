@@ -114,7 +114,7 @@
       type: boolean
       defaultValue: false
       ui:
-        label: 'Top News (gelb auf blau)?'
+        label: 'Top News (gelb auf blau)??'
         reloadIfChanged: true
         inspector:
           group: 'newsblock'
