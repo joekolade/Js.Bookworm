@@ -122,6 +122,7 @@
       type: string
       ui:
         label: 'Link'
+        reloadIfChanged: true
         inspector:
           group: 'newsblock'
           editor: 'Neos.Neos/Inspector/Editors/LinkEditor'

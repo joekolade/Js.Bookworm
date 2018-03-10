@@ -15,7 +15,7 @@
         <div class="col-xs-11">
           {neos:contentElement.editable(property: 'text')}
             <f:if condition="{newslink}">
-                {newslink}
+                <neos:link.node node="{newslink}">mehr erfahren</neos:link.node>
             </f:if>
         </div>
       </div>
