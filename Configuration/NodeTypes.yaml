@@ -10,6 +10,19 @@
 
 
 'Neos.NodeTypes:Page':
+  ui:
+    inspector:
+      groups:
+        menu:
+          label: Menü
+          position: 750
+  properties:
+    text:
+      type: string
+      ui:
+        label: 'Zahl, die im Menü erscheinen soll'
+        inspector:
+          group: menu
   childNodes:
     main:
       constraints:
