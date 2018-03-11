@@ -9,7 +9,12 @@
     <ul class="nav navbar-nav">
         <f:for each="{items}" as="item" iteration="menuIteration">
             <li{fusion:render(path:'{item.state}.attributes') -> f:format.raw()}>
-                <neos:link.node node="{item.node}">{item.label}</neos:link.node>
+                <neos:link.node node="{item.node}">
+                    {item.label}
+                    <f:if condition="{item.menubadge}">
+                        <span class="badge">{item.menubadge}</span>
+                    </f:if>
+                </neos:link.node>
             </li>
         </f:for>
     </ul>
