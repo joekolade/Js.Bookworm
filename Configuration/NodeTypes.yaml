@@ -17,7 +17,7 @@
           label: Menü
           position: 750
   properties:
-    text:
+    menubadge:
       type: string
       ui:
         label: 'Zahl, die im Menü erscheinen soll'
