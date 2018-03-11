@@ -11,8 +11,8 @@
             <li{fusion:render(path:'{item.state}.attributes') -> f:format.raw()}>
                 <neos:link.node node="{item.node}">
                     {item.label}
-                    <f:if condition="{item.menubadge}">
-                        <span class="badge">{item.menubadge}</span>
+                    <f:if condition="{item.label} == 'Aktuelles'">
+                        <span class="badge">1</span>
                     </f:if>
                 </neos:link.node>
             </li>

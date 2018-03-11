@@ -4,11 +4,6 @@ Neos:
       defaultLanguage: 'de'
       #backendLoginForm:
         #backgroundImage: 'resource://Js.Bookworm/Public/Images/login_.jpg'
-    #Ui:
-     # resources:
-      #  javascript:
-       #   'Js.Bookworm:CustomStylingForCkEditor':
-        #    resource: resource://Js.Bookworm/Public/CustomStylingForCkEditor/Plugin.js
 
 MOC:
   ImageOptimizer:
