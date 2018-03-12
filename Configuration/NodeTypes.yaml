@@ -1,14 +1,5 @@
-# If you need more than just the "main" content area you can uncomment the snippet below. It will add a "sidebar" area
-# to your pages. You can add as many areas as you like, still only those that are rendered in your Fusion-code and
-# Template are visible on your page.
----
-#'Neos.NodeTypes:Page':
-#  childNodes:
-#    'sidebar':
-#      type: 'Neos.Neos:ContentCollection'
 
-
-
+# Page type w/ additions
 'Neos.NodeTypes:Page':
   ui:
     inspector:
@@ -36,6 +27,7 @@
           'Neos.Neos:PluginView': false
           'Flowpack.Neos.FrontendLogin:LoginForm': false
 
+# start Page w/ page properties
 'Js.Bookworm:Startpage':
   superTypes:
     'Neos.NodeTypes:Page': true
@@ -85,6 +77,8 @@
           'Neos.NodeTypes:FourColumn': false
           'Neos.Neos:PluginView': false
           'Flowpack.Neos.FrontendLogin:LoginForm': false
+
+# news basic element
 'Js.Bookworm:Newsblock':
   superTypes:
     'Neos.Neos:Content': true
@@ -140,6 +134,7 @@
           group: 'newsblock'
           editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
 
+# news element w/ image
 'Js.Bookworm:NewsblockImage':
   superTypes:
     'Js.Bookworm:Newsblock': true
@@ -154,6 +149,7 @@
         inspector:
           group: newsblock
 
+# Box for (tabular) data
 'Js.Bookworm:Databox':
   superTypes:
     'Neos.Neos:Content': true
@@ -175,6 +171,7 @@
         label: Title
         inlineEditable: true
 
+# Image slider element
 'Js.Bookworm:Slider':
   superTypes:
     'Neos.Neos:Content': true
