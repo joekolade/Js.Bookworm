@@ -39,7 +39,7 @@ class MenuImplementation extends \Neos\Neos\Fusion\MenuImplementation
             'state' => self::STATE_NORMAL,
             'label' => $currentNode->getLabel(),
             'menuLevel' => $this->currentLevel,
-            'property' => $currentNode->getProperties(),
+            'menubadge' => $currentNode->getProperty('menubadge'),
         );
 
         $item['state'] = $this->calculateItemState($currentNode);
