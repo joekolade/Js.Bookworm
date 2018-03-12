@@ -38,13 +38,11 @@ class MenuImplementation extends \Neos\Neos\Fusion\MenuImplementation
             'node' => $currentNode,
             'state' => self::STATE_NORMAL,
             'label' => $currentNode->getLabel(),
-            'property' => $currentNode->getProperties(),
             'menuLevel' => $this->currentLevel,
             'menubadge' => $currentNode->getProperty('menubadge'),
         );
 
         $item['state'] = $this->calculateItemState($currentNode);
-
         if (!$this->isOnLastLevelOfMenu($currentNode)) {
             $this->currentLevel++;
             $item['subItems'] = $this->buildMenuLevelRecursive($currentNode->getChildNodes($this->getFilter()));
