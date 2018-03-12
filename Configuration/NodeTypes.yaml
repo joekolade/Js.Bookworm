@@ -1,5 +1,3 @@
-
-# Page type w/ additions
 'Neos.NodeTypes:Page':
   ui:
     inspector:
@@ -27,7 +25,6 @@
           'Neos.Neos:PluginView': false
           'Flowpack.Neos.FrontendLogin:LoginForm': false
 
-# start Page w/ page properties
 'Js.Bookworm:Startpage':
   superTypes:
     'Neos.NodeTypes:Page': true
