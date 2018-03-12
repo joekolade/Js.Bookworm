@@ -35,7 +35,6 @@ prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
 		templatePath = 'resource://Js.Bookworm/Private/Templates/Page/Default.html'
 		sectionName = 'body'
 		parts {
-			menu = Neos.Neos:Menu {
 			menu = Js.Bookworm:Menu {
 				templatePath = 'resource://Js.Bookworm/Private/Templates/FusionObjects/MainMenu.html'
 				current.attributes {
