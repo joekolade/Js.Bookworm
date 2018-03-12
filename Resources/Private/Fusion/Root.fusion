@@ -57,7 +57,7 @@ prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
 
 		content {
 			// The default content section
-			main = PrimaryContent {
+			main = Neos.Neos:PrimaryContent {
 				nodePath = 'main'
 			}
 		}
@@ -81,6 +81,10 @@ prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
 
 prototype(Js.Bookworm:Startpage.Document) < prototype(Neos.NodeTypes:Page.Document)
 
+
+prototype(Js.Bookworm:Menu) >
+prototype(Js.Bookworm:Menu) < prototype(Neos.Neos:Menu)
+prototype(Js.Bookworm:Menu).@class = 'Js\\Bookworm\\Fusion\\MenuImplementation'
 
 
 prototype(Neos.NodeTypes:Image) {
