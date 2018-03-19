@@ -3,7 +3,8 @@
     "type": "neos-site",
     "require": {
         "neos/neos": "*",
-        "neos/nodetypes": "*"
+        "neos/nodetypes": "*",
+        "aertmann/history": "^2.0"
     },
     "suggest": {
         "neos/seo": "*"
