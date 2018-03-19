@@ -89,6 +89,4 @@ prototype(Js.Bookworm:Menu).@class = 'Js\\Bookworm\\Fusion\\MenuImplementation'
 
 prototype(Neos.NodeTypes:Image) {
 	maximumWidth = 740
-	imageClassName = "img-responsive"
-	templatePath = 'resource://Js.Bookworm/Private/Templates/NodeTypes/Image.html'
 }
