@@ -6,7 +6,7 @@
             <media:image image="{image}" alt="{alternativeText}" title="{title}" maximumWidth="{maximumWidth}" maximumHeight="{maximumHeight}" class="img-responsive" />
         </f:then>
         <f:else>
-            <img src="{f:uri.resource(package: 'Neos.Neos', path: 'Images/dummy-image.svg')}" title="Dummy image" alt="Dummy image" />
+            <img class="img-responsive" src="{f:uri.resource(package: 'Neos.Neos', path: 'Images/dummy-image.svg')}" title="Dummy image" alt="Dummy image" />
         </f:else>
     </f:if>
 </div>
