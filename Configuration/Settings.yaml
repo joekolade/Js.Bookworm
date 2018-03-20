@@ -1,11 +1,11 @@
 Neos:
   Neos:
+    eventLog:
+      enabled: TRUE
     userInterface:
       defaultLanguage: 'de'
       #backendLoginForm:
         #backgroundImage: 'resource://Js.Bookworm/Public/Images/login_.jpg'
-    eventLog:
-      enabled: TRUE
 MOC:
   ImageOptimizer:
     useGlobalBinary: true
