@@ -5,9 +5,15 @@
 include: NodeTypes/*.fusion
 
 root {
-	default {
-		type = ${q(node).property('_nodeType') + '.Document'}
-		renderPath >
+	# default {
+	# 	type = ${q(node).property('_nodeType') + '.Document'}
+	# 	renderPath >
+	# }
+  documentType {
+		condition = Neos.Fusion:CanRender {
+			type = ${q(documentNode).property('_nodeType.name') + '.Document'}
+		}
+		type = ${q(documentNode).property('_nodeType.name') + '.Document'}
 	}
 }
 
